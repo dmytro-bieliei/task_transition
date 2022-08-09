@@ -1,0 +1,60 @@
+.main {
+  min-height: 200vh;
+  margin-top: 140px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  background: teal;
+  padding: 10px;
+  width: 100%;
+}
+
+.nav-list-item {
+  display: inline-block;
+}
+
+.nav-link {
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid;
+  background-color: white;
+  transition: background-color 0.5s ease 0s, color 1.5s ease-in-out 0s;
+}
+
+/* Підкреслювання внизу з права-на-ліво */
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  bottom:-2px;
+  right: 0px;
+  height: 3px;
+  background-color: red;
+  transition: width 0.4s ease-in;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  background-color: aqua;
+  color: red;
+}
+
+.animated {
+  width: 200px;
+  color: white;
+  background: black;
+  font-size: 30px;
+  padding: 10px;
+  transition-property: width;
+  transition-duration: 1s;
+}
+
+
+
